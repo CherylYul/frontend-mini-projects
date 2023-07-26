@@ -1,0 +1,121 @@
+html, body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+/* typography */
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+    color: #EED6D3;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    margin: 25px;
+}
+
+/* layout */
+
+header {
+    background-color: #67595E;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 370px;
+    gap: 15px;
+    padding: 16px 0 0 0;
+}
+
+.pumpkin-image {
+    width: 80px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 auto;
+}
+
+/* controls */
+
+.emotion-radios {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 4px 8px;
+}
+
+.radio:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.radio:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 0;
+}
+
+label{
+    font-size: 14px;
+    padding: 3px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.highlight{
+    background-color: #fff0ee;
+    color: #bd301d;
+    font-weight: bold;
+    accent-color: #bd301d;
+}
+
+input[type="radio"]{
+    cursor: pointer;
+}
+
+.gifs-check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+}
+
+.gifs-check label{
+    width: unset;
+    margin-right: 5px;
+}
+
+.get-image-btn{
+    background-color: #67595e;
+    color: #eed6d3;
+    padding: 15px 19px;
+    font-size: 24px;
+    font-weight: 800;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
