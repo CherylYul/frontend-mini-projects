@@ -1,0 +1,60 @@
+import { blogs, first } from './data.js'
+const mainBlog = document.getElementById('main-blog')
+const blogContainer = document.getElementById('blog-container')
+const viewMore = document.getElementById('view-more')
+
+function renderMainBlog() {
+    let blogHTML = ``
+    first.forEach(function(blog){
+        blogHTML += `
+        <p class="blog-date">${blog.date}</p>
+        <h1 class="blog-title">${blog.title}</h1>
+        <p class="blog-desc">${blog.desc}</p>
+        `
+    })
+    mainBlog.innerHTML = blogHTML
+}
+
+function renderBlog() {
+    let partialBlog = []
+    partialBlog.push(blogs[0], blogs[1], blogs[2])
+    let blogHTML = ``
+
+    partialBlog.forEach(function(blog){
+        blogHTML += `
+        <div class="blog">
+            <img src="${blog.image}">
+            <p class="blog-date">${blog.date}</p>
+            <h2 class="blog-title">${blog.title}</h2>
+            <p class="blog-desc">${blog.desc}</p>
+        </div>
+        `
+    })
+
+    blogContainer.innerHTML = blogHTML
+}
+
+renderMainBlog()
+renderBlog()
+
+function renderAllBlogs() {
+    let blogHTML = ``
+
+    blogs.forEach(function(blog){
+        blogHTML += `
+        <div class="blog">
+            <img src="${blog.image}">
+            <p class="blog-date">${blog.date}</p>
+            <h2 class="blog-title">${blog.title}</h2>
+            <p class="blog-desc">${blog.desc}</p>
+        </div>
+        `
+    })
+
+    blogContainer.innerHTML = blogHTML
+}
+
+viewMore.addEventListener('click', function() {
+    renderAllBlogs()
+    viewMore.style.display = 'none'
+})
