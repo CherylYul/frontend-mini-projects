@@ -6,6 +6,7 @@ body {
 }
 
 img { width: 100%; }
+#yul-img{ width: 50%; border-radius: 50%; }
 
 /* typography */
 
@@ -23,7 +24,11 @@ nav a:focus, nav a:hover {
 
 p { margin: 0.325rem 0; }
 
-/* header */
+.bold { font-weight: 700; }
+.space { margin-top: 2em; }
+.center { text-align: center; }
+
+/* layout */
 
 header nav {
     display: grid;
@@ -33,25 +38,25 @@ header nav {
 }
 
 nav i { grid-area: icon; align-self: center; }
-nav .main-page { grid-area: main; font-weight: 700; }
+nav .main-page { grid-area: main; }
 nav .home-page { grid-area: home; justify-self: end; }
 nav .about-page { grid-area: about; justify-self: end; }
 
 footer {
     background-color: #202020;
-    text-align: center;
     font-size: 0.875rem;
     padding: 1em;
 }
 
-footer p:first-child { color: #ECECEC; font-weight: 700; margin-bottom: 0;}
+footer p:first-child { color: #ECECEC; margin-bottom: 0;}
 footer p:last-child { color: #D7D7D7; margin-top: 0; }
 
 /* main */
 
-.blog { padding: 4%;}
+.blog { padding: 4%; }
 
 #main-blog {
+    display: block;
     background-image: url("images/journal.jpeg");
     background-size: cover;
     color: #FFFFFF;
@@ -63,9 +68,7 @@ footer p:last-child { color: #D7D7D7; margin-top: 0; }
     line-height: 1.25;
 }
 
-.blog-date {
-    text-transform: uppercase;
-}
+.blog-date { text-transform: uppercase; }
 
 /* button */
 
@@ -73,10 +76,27 @@ footer p:last-child { color: #D7D7D7; margin-top: 0; }
     border: none;
     background-color: #FFFFFF;
     text-decoration: underline;
-    font-weight: 700;
     display: block;
     margin: 1em auto 3em auto;
     cursor: pointer;
 }
 
 #view-more:hover, #view-more:focus { color: brown; }
+
+@media (min-width: 768px) {
+    header nav {
+        grid-template-columns: 1.5rem 10rem auto 7rem 7rem;
+        padding: 1.25rem 2rem;
+    }
+
+    #main-blog { padding: 30% 30% 4% 4%;}
+
+    #blog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 4%;
+    }
+
+    .indent { margin: 1em 8%; }
+    p { line-height: 1.8;}
+}
