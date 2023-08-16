@@ -1,0 +1,40 @@
+<html>
+<head>
+		<!-- 1. CSS file -->
+		<link rel="stylesheet" href="index.css">
+		<!-- 2. Font Awesome CDN: add icon tags -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- 3. Responsive viewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- 4. Google Fonts -->        
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <form id="header">
+            <input type="color" value="#FF6542" class="no-border"/>
+            <select name="color-scheme-mode" 
+                    id="color-scheme-mode"
+                    class="d1d5db">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
+            </select>
+            <button type="submit" class="no-border d1d5db">Get color scheme</button>
+        </form>
+		<div class="color-container">
+            <div class="color one"></div>
+            <div class="color two"></div>
+            <div class="color three"></div>
+            <div class="color four"></div>
+            <div class="color five"></div>
+        </div>
+		<script src="index.js" type="module"></script>
+</body>
+</html>
