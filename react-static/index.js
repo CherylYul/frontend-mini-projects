@@ -1,19 +1,39 @@
 // import React from "react"
 // import ReactDOM from "react-dom"
 
-function Navbar() {
+function Navbar(props) {
+    const style = {backgroundColor: props.mode === "dark" ? "#21222A" : "#FFFFFF"}
+    const colorDark = {color: props.mode === "dark" ? "#FFFFFF" : "#918E9B"}
+    const colorWhite = {color: props.mode === "white" ? "#2B283A" : "#918E9B"}
+
     return (
-        <nav>
+        <nav style={style} >
             <img src="./images/react-icon-small.png" className="nav--icon" />
-            <h3 className="nav--logo_text">ReactFacts</h3>
-            <h4 className="nav--title">React Course - Project 1</h4>
+            <h2 className="nav--logo_text">ReactFacts</h2>
+            <div className="nav--mode">
+                <p style={colorDark}>Dark</p>
+                <div className="nav--toggle">
+                    <div className="nav--toggle-btn" onClick={props.handleClick}></div>
+                </div>
+                <p style={colorWhite}>Light</p>
+            </div>
         </nav>
     )
 }
 
-function Main() {
+function Main(props) {
+    const style = props.mode === "dark" ? 
+        {
+            backgroundColor: "#282D35",
+            color: "#FFFFFF"
+        } :
+        {
+            backgroundColor: "#FFFFFF",
+            color: "#282D35"
+        }
+
     return (
-        <main>
+        <main style={style} >
             <h1 className="main--title">Fun facts about React</h1>
             <ul className="main--facts">
                 <li>Was first released in 2013</li>
@@ -27,10 +47,19 @@ function Main() {
 }
 
 function App() {
+    const [theme, setTheme] = React.useState("dark")
+    document.body.style.background = theme === "dark" ? "#282D35" : "white"
+    console.log(theme)
+
+    function toggleTheme() { 
+        setTheme(prev => prev === "dark" ? "white" : "dark")
+        document.querySelector(".nav--toggle").classList.toggle("active")
+    }
+
     return (
         <div className="container">
-            <Navbar />
-            <Main />
+            <Navbar mode={theme} handleClick={toggleTheme} />
+            <Main mode={theme} />
         </div>
     )
 }
