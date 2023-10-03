@@ -2,6 +2,7 @@
 
 :root {
     --gray: #1F2937;
+    --navy: #1F2937;
     --red: #991B1B;
     --yellow: #92400E;
     --green: #065F46;
@@ -211,3 +212,83 @@ button.button-danger {
 .noti.info .noti-title { color: var(--title-info); }
 .noti.info .noti-text { color: var(--text-info); }
 .noti.info i { color: var(--icon-info); }
+
+/***** CARDS COMPONENTS *****/
+.card {
+    position: relative;
+    width: 400px;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    background-color: #F9FAFB;
+    padding: 0rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card.icon {
+    position: absolute;
+    background-color: #3F75FE;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+}
+
+.card.icon i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+
+.card.text {
+    line-height: 1.5rem;
+    color: #6B7280;
+    margin: 0;
+}
+
+.card.title { margin-top: 3rem; }
+
+/***** AVATAR COMPONENTS *****/
+
+
+body { background-color: #2F2F2F; }
+
+.avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .3rem solid white;
+}
+.avatar > img { width: 100%; }
+.avatar-icon { background-color: var(--navy); }
+.avatar-letters {
+    background-color: var(--red);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Karla', sans-serif;
+}
+.avatar > svg {
+    height: 100%;
+    width: 100%;
+    transform: translateY(20px);
+    color: whitesmoke;
+}
+
+.navy { background-color: #1F2937; }
+.pink { background-color: #DA6AEC; }
+.red { background-color: #F43F5E; }
+.blue { background-color: #2F74DC; }
+.green { background-color: #22CD90; }
