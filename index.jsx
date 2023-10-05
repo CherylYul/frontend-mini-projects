@@ -1,15 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import Menu from "./components/Menu/index"
 import Star from "./components/Star"
-import Badges from "./components/Badges/Badges"
-import Notification from './components/Notifications/index';
+import Badges from "./components/Badges"
+import Notification from './components/Notifications/index'
 import Card from "./components/Cards/index"
-import Avatar from "./components/Avatar/Avatar"
+import Avatar from "./components/Avatar"
+import Testimonial from './components/Testimonials/Testimonial'
 
 function App() {
   return (
-      <div>
+      <div className="main">
         <div>
           <Menu onOpen={() => console.log("Opened/closed")}>
           <Menu.Button>Menu</Menu.Button>
@@ -24,9 +25,9 @@ function App() {
         <br />
         <br />
         <div>
-          <Badges className="badge" size="lg" color="red" shape="square">
-            badges
-          </Badges>
+          <Badges className="badge" size="lg" color="red" shape="square">badges</Badges>
+          <Badges className="badge" size="sm" color="green" shape="square">badges</Badges>
+          <Badges className="badge" color="yellow" shape="pill">badges</Badges>
         </div>
         <br />
         <br />
@@ -81,11 +82,28 @@ function App() {
         <br />
         <br />
         <div>
-          <Avatar src="./components/Avatar/images/bob.jpg" alt="Bob Ziroll" />
+          <Avatar src="./assets/images/bob.jpg" alt="Bob Ziroll" />
           <br />
           <Avatar variant="letters">BZ</Avatar>
           <br />
           <Avatar variant="icon" />
+        </div>
+        <br />
+        <br />
+        <div>
+          <Testimonial src="./assets/images/bob.jpg" alt="Bob Ziroll" color="blue"
+                       name="Bob Ziroll" pos="Frontend Developer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. 
+            Amet feugiat est integer dolor auctor adipiscing nunc urna, sit. 
+          </Testimonial>
+        </div>
+        <br />
+        <br />
+        <div>
+          <Testimonial color="simple" name="Bob Ziroll" pos="Frontend Developer">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. 
+            Amet feugiat est integer dolor auctor adipiscing nunc urna, sit. 
+          </Testimonial>
         </div>
       </div>
   )

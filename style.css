@@ -10,6 +10,7 @@
     --indigo: #3730A3;
     --purple: #5B21B6;
     --pink: #9D174D;
+
     --light-gray: #F3F4F6;
     --light-red: #FEE2E2;
     --light-yellow: #FEF3C7;
@@ -43,12 +44,14 @@
 body {
     background-color: #2f2f2f;
     height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
     font-family: Inter;
+    color: whitesmoke;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /***** STAR COMPONENTS *****/
@@ -110,7 +113,6 @@ button.button-danger {
 }
 
 .menu-button { background-color: white; }
-
 .menu-dropdown {
     position: absolute;
     left: 0;
@@ -192,10 +194,15 @@ button.button-danger {
     display: flex;
     gap: 1rem;
     font-size: 14px;
-    width: 720px;
+    width: 80%;
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
-.noti-title { font-weight: 500; }
-.noti-text { line-height: 1.5; }
+.noti-title { 
+    font-weight: 500; 
+    margin-right: 1.25rem;
+}
 .noti.success { background-color: var(--bg-success); }
 .noti.success .noti-title { color: var(--title-success); }
 .noti.success .noti-text { color: var(--text-success); }
@@ -216,11 +223,12 @@ button.button-danger {
 /***** CARDS COMPONENTS *****/
 .card {
     position: relative;
-    width: 400px;
-    margin-top: 2rem;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
     border-radius: 0.5rem;
     background-color: #F9FAFB;
-    padding: 0rem 1.5rem 1rem 1.5rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +242,6 @@ button.button-danger {
     height: 50px;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 0;
 }
 
 .card.icon i {
@@ -249,16 +256,16 @@ button.button-danger {
 .card.text {
     line-height: 1.5rem;
     color: #6B7280;
-    margin: 0;
+    margin-top: 0;
 }
 
-.card.title { margin-top: 3rem; }
+.card.title { 
+    margin-top: 3rem; 
+    color: black; 
+    font-weight: 500;
+}
 
 /***** AVATAR COMPONENTS *****/
-
-
-body { background-color: #2F2F2F; }
-
 .avatar {
     height: 150px;
     width: 150px;
@@ -292,3 +299,69 @@ body { background-color: #2F2F2F; }
 .red { background-color: #F43F5E; }
 .blue { background-color: #2F74DC; }
 .green { background-color: #22CD90; }
+
+/***** TESTIMONIAL COMPONENTS *****/
+
+.testimonial {
+    margin-top: 50%;
+    padding: 45% 1.5rem 1.5rem 1.5rem;
+    line-height: 1.5;
+    position: relative;
+}
+.testimonial .bi-quote { 
+    font-size: 5rem; 
+    color: #FFFFFF40; 
+    margin-left: -1rem;
+}
+.testimonial .name { margin-bottom: 0; font-weight: 700; }
+.testimonial .pos { margin-top: 0; }
+.testimonial .text { font-size: 1.25rem; }
+.testimonial img {
+    position: absolute;
+    width: 80%; 
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 0.75rem;
+}
+
+.testimonial.simple {
+    background: #F9FAFB;
+    color: #111827;
+    margin-top: 0;
+    padding-top: 1rem;
+}
+
+.testimonial.simple .bi-quote {
+    color: #6B7280;; 
+}
+
+@media (min-width: 550px) {
+    .testimonial {
+        width: 80%;
+        height: 250px;
+        max-width: 1200px;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .testimonial .text { 
+        margin: 0.125rem;
+        font-size: 1.125rem; 
+    }
+    
+    .testimonial img {
+        width: 300px;
+        position: unset;
+        transform: none;
+    }
+
+    .testimonial.simple {
+        text-align: center;
+    }
+}
