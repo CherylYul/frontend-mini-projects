@@ -1,5 +1,4 @@
 import React from "react"
-import { BsStarFill } from "react-icons/bs"
 
 export default function Reviews() {
     const reviewsData = [
@@ -36,9 +35,9 @@ export default function Reviews() {
             {reviewsData.map((review) => (
                 <div key={review.id}>
                     <div className="review">
-                        {[...Array(review.rating)].map((_, i) => (
+                        {/* {[...Array(review.rating)].map((_, i) => (
                             <BsStarFill className="review-star" key={i} />
-                        ))}
+                        ))} */}
                         <div className="info">
                             <p className="name">{review.name}</p>
                             <p className="date">{review.date}</p>
