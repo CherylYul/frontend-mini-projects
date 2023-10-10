@@ -10,17 +10,16 @@ import {
 } from "firebase/firestore/lite"
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD_k3v3HK3tKEqhlqFHPkwogW7PqEqhGhk",
-    authDomain: "vanlife-a1af5.firebaseapp.com",
-    projectId: "vanlife-a1af5",
-    storageBucket: "vanlife-a1af5.appspot.com",
-    messagingSenderId: "803007000356",
-    appId: "1:803007000356:web:446cd3a1ca406839258db1"
+  apiKey: "AIzaSyDszJof0P0_lVj6_azPMetEVb_8nTvdOgc",
+  authDomain: "vanlife-8ba5a.firebaseapp.com",
+  projectId: "vanlife-8ba5a",
+  storageBucket: "vanlife-8ba5a.appspot.com",
+  messagingSenderId: "552970817593",
+  appId: "1:552970817593:web:aab681c61aee8f9c313de8"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
-
 const vansCollectionRef = collection(db, "vans")
 
 export async function getVans() {
@@ -41,6 +40,21 @@ export async function getVan(id) {
     }
 }
 
+// export async function getVans(id) {
+//     const url = id ? `/api/vans/${id}` : "/api/vans"
+//     const res = await fetch(url)
+//     if (!res.ok) {
+//         throw {
+//             message: "Failed to fetch vans",
+//             statusText: res.statusText,
+//             status: res.status
+//         }
+//     }
+//     const data = await res.json()
+//     return data.vans
+// }
+
+
 export async function getHostVans() {
     const q = query(vansCollectionRef, where("hostId", "==", "123"))
     const querySnapshot = await getDocs(q)
@@ -49,6 +63,20 @@ export async function getHostVans() {
         id: doc.id
     }))
     return dataArr
+}
+
+export async function getHostVans(id) {
+    const url = id ? `/api/host/vans/${id}` : "/api/host/vans"
+    const res = await fetch(url)
+    if (!res.ok) {
+        throw {
+            message: "Failed to fetch vans",
+            statusText: res.statusText,
+            status: res.status
+        }
+    }
+    const data = await res.json()
+    return data.vans
 }
 
 export async function loginUser(creds) {
