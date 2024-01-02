@@ -1,24 +1,22 @@
 body {
     margin: 0;
-    background: #F8F4E3;
-    color: #2A2B2A;
-    text-align: center;
+    background: #e2fcff;
+    color: black;
     font-family: 'Lota', sans-serif;
 }
 
-/***** LAYOUT *****/
-
 .center-container {
     margin: 0 auto;
-    max-width: 100%;
+    width: 100%;
+    max-width: 700px;
 }
 
-/***** CHECKBOX *****/
+/***** UTILITIES *****/
 
 .check-box label,
 .radio label { 
     display: inline-block;
-    margin: 1rem; 
+    margin: 1rem 0 0 0.5rem;
 }
 
 input[type=checkbox],
@@ -28,16 +26,123 @@ input[type=radio] {
     -webkit-transform: scale(2);
     -o-transform: scale(2);
     transform: scale(2);
-    accent-color: #FF82A9;
+    accent-color: #FB5012;
 }
 
-input[type=range] {
-    /* -webkit-appearance: none; */
-    /* width: 100%; */
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
+input[type=range] { accent-color: #FB5012; }
+input[type=number] {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.flex {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/***** CUSTOM *****/
+
+.custom-container {
+    width: 80%;
+    margin: 1rem auto;
+    display: grid;
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px #999;
+    background-color: white;
+    padding: 1rem 1.5rem;
+    grid-template-columns: 6fr 4fr; 
+    grid-template-areas: "title title" "slide slide" "radio checkbox";
+}
+
+.title { 
+    grid-area: title;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #cfd9de;
+    text-shadow: 0px 0px 2px #aaaaaa;
+}
+
+.password-length { grid-area: slide; }
+.radio-btn { grid-area: radio; }
+.checkbox-group { grid-area: checkbox; }
+
+/***** SLIDER *****/
+
+.password-length {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "text text" "number slider";  
+}
+
+.password-length label { 
+    grid-area: text; 
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.password-length input[type=number] { grid-area: number; }
+.password-length input[type=range] { 
+    grid-area: slider; 
+    width: 90%;
+    justify-self: center;
+}
+
+/***** TOOLTIP *****/
+
+.info {
+    position: relative;
+    align-self: self-end;
+    cursor: pointer;
+}
+
+.info-details {
+    position: absolute;
+    left: 1.5rem;
+    top: -1rem;
+    width: 160px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.325rem 0;
+    opacity: 0;
+    box-shadow: 0 0 10px #999;
+}
+
+.tooltip:hover+.info-details {
+    opacity: 0.8;
+    z-index: 1;
+}
+
+/***** RESULT *****/
+
+.result-container {
+    background-color: #FB5012;
+    border-radius: 8px;
+    width: 80%;
+    margin: 1rem auto;
+    box-shadow: 0px 0px 10px #999;
+    padding: 1rem;
+    color: white;
+    display: grid;
+    grid-template-columns: 7fr 1fr 1fr;
+    border-bottom: 0.5rem solid white;
+}
+
+.bi-copy, 
+.bi-arrow-repeat {
+    font-size: 1.75rem;
+}
+.result-container .pass {
+    align-self: center;
+    font-size: 1.25rem;
+
+}
+
+.result-container button {
+    background-color: transparent;
+    color: inherit;
+    border: none;
+}
