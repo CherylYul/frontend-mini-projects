@@ -12,10 +12,12 @@ export default [
         facilities: ["Alfresco/Outdoor Dining", "Entertainment", "Non Smoking", "Pop Up Wine Bar", "Wine Tasting", "Bar", "Online Orders", "Shop / Gift Shop", "Cooking School", "Live Music", "Pet Friendly - Enquire", "Takeaway Available"],
         menu: [
             {
-                name: "Cappuccino",
+                id: 101,
+                name: "Morning Cappuccino",
                 image: "summerstudio-cappuccino.png",
                 ingredients: "expresso, steamed mil foam",
                 price: 6,
+                quantity: 0,
             }
         ]
     },
@@ -32,22 +34,28 @@ export default [
         facilities: ["Alfresco/Outdoor Dining", "Non Smoking", "Takeaway Available", "Delivery available", "Online Orders", "Family Friendly", "Pet Friendly - Enquire"],
         menu: [
             {
+                id: 102,
                 name: "Big Breakfast",
                 image: "big-breakfast.png",
-                ingredients: "2 eggs your way, steaky bacon, sausage, baked tonnato, teter tots, herbed mushroom, wilted greens, sourdough",
-                price: 30
+                ingredients: "2 eggs your way, steaky bacon, sausage, baked tonnato, teter tots",
+                price: 30,
+                quantity: 0,
             },
             {
+                id: 103,
                 name: "Cafe Latte",
                 image: "latte.png",
                 ingredients: "expresso, steamed milk",
                 price: 6,
+                quantity: 0,
             },
             {
+                id: 104,
                 name: "Cappuccino",
                 image: "cappuccino.png",
                 ingredients: "expresso, steamed mil foam",
                 price: 6,
+                quantity: 0,
             }
         ]
     },
@@ -64,22 +72,28 @@ export default [
         facilities: ["Alfresco/Outdoor Dining", "Suitable for Functions", "Bar", "Takeaway Available", "Pet Friendly - Enquire"],
         menu: [
             {
+                id: 105,
                 name: "Mimosa",
                 image: "mimosa.png",
                 ingredients: "prosecco, orange juice",
                 price: "16",
+                quantity: 0,
             },
             {
+                id: 106,
                 name: "Gin & Juice",
                 image: "gin-and-juice.png",
                 ingredients: "Adelaide Gin, seasonal juice",
-                price: "18",      
+                price: "18",
+                quantity: 0,
             },
             {
+                id: 107,
                 name: "Matcha Martini",
                 image: "matcha-martini.png",
                 ingredients: "Adelaide Vodka, Amaretto, matcha, almond, honey",
-                price: "20",      
+                price: "20",
+                quantity: 0, 
             }
         ]
     },
@@ -96,22 +110,28 @@ export default [
         facilities: ["Alfresco/Outdoor Dining", "Carpark", "Family Friendly", "Takeaway Available", "Pet Friendly - Enquire", "Lawn / Gardens", "Private Dining Area", "Entertainment", "Non Smoking", "Suitable for Functions"],
         menu: [
             {
+                id: 108,
                 name: "Bloom Burger",
                 image: "bloom-burger.png",
                 ingredients: "Bap roll, beef sausage, scrambled egg, american cheese, mustard aioli",
                 price: "19",
+                quantity: 0,
             },
             {
+                id: 109,
                 name: "Cherry Chocolate Cake",
                 image: "cherry-chocolate-cake.png",
                 ingredients: "Chocolate torte, cherry, creme fraiche",
-                price: "16",      
+                price: "16",
+                quantity: 0,
             },
             {
+                id: 110,
                 name: "White Balsamic Vinaigrette",
                 image: "white-balsamic-vinaigrette.png",
                 ingredients: "Leafy greens, white balsamic",
-                price: "9",      
+                price: "9",
+                quantity: 0,
             }
         ]
     },

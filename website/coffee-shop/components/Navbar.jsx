@@ -1,18 +1,21 @@
 import React from "react"
+import { Link } from "react-router-dom"
+import { OpenContext } from "../App"
 
 export default function Navbar() {
+    const { toggleOpen } = React.useContext(OpenContext)
     return (
-        // <div className="center-container">
-            <nav className="flex">
-                <div className="nav--right flex">
+        <nav className="flex">
+            <div className="nav--right">
+                <Link to="/" className="flex">
                     <i className="bi bi-caret-up-square-fill"></i>
                     <h3>Adelaide Coffee Shop</h3>
-                </div>
-                <div className="nav-left flex">
-                    <i className="bi bi-cart-fill"></i>
-                    <p>your cart</p>
-                </div>
-            </nav>
-        // </div>
+                </Link>
+            </div>
+            <button className="nav-left flex" onClick={toggleOpen.bind(this, true)}>
+                <i className="bi bi-cart-fill"></i>
+                <p>SHOPPING CART</p>
+            </button>
+        </nav>
     )
 }

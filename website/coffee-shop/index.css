@@ -13,37 +13,48 @@ body {
 }
 
 /***** UTILITIES *****/
+
+.center { text-align: center; }
 .flex {
     display: flex;
     align-items: center;
 }
 
-.center {
-    text-align: center;
-}
-
-i {
-    font-size: 1.5rem;
-    margin-right: 0.75rem;
-}
-
-img {
-    width: 100%;
+img { width: 100%; }
+i { font-size: 1.5rem; margin-right: 0.75rem; }
+button:hover { background-color: rgb(4, 91, 4); }
+button {
+    background: rgb(170, 25, 25);
+    color: whitesmoke;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #999;
+    border: none;
 }
 
 /***** NAVBAR *****/
 nav {   
-    justify-content: space-between;
     background-color: black;
     color: whitesmoke;
     padding: 0 1rem;
 }
 
-/***** HERO *****/
-.hero-session {
-    position: relative;
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
+nav button {
+    padding: 0rem 1.25rem;
+    margin: 0 1rem 0 auto;
+    border-radius: 5px;
+}
+
+/***** HERO *****/
+
+.hero-session { position: relative; }
 .hero--text {
     position: absolute;
     background: whitesmoke;
@@ -54,19 +65,14 @@ nav {
 /***** SHOP *****/
 
 .shop {
-    border: 8px solid rgb(4, 91, 4);
     border-radius: 18px;
-    margin: 3rem 0;
+    margin: 60px 0;
+    box-shadow: 0 0 5px #999;
+    padding: 10px;
 }
 
-.shop--image {
-    border-radius: 8px;
-}
-
-.bi-star-fill {
-    color: orange;
-}
-
+.shop--image { border-radius: 8px; }
+.bi-star-fill { color: orange; }
 .shop--info {
     margin: 1rem;
     font-weight: 600;
@@ -80,7 +86,117 @@ nav {
     padding: 0.75rem 1rem;
     text-decoration: none;
     font-weight: 700;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     cursor: pointer;
     box-shadow: 0px 0px 5px #999;
 }
+
+/***** SHOPDETAIL *****/
+
+.shop-detail--title { margin-bottom: 0; }
+.shop-detail--location {
+    margin-top: 0.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.shop-detail-nav { margin: 3rem 0 2rem; }
+.shop-detail-nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgb(4, 91, 4);
+    padding: 1rem;
+}
+
+/***** SHOP DETAIL MENU *****/
+
+.menu-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: auto;
+}
+
+.menu-item {
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 0 0 5px #999;
+    width: 250px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    height: 380px;
+}
+
+.menu-item--image {
+    width: 200px;
+    border-radius: 18px;
+}
+
+.menu-item--info { font-weight: bold; }
+.menu-item p { margin-bottom: 0; }
+.menu-item--price { margin-left: auto; }
+.menu-item--info, 
+.menu-item--ingredients {
+    margin: 0 20px;
+    text-align: start;
+}
+
+.menu-item button {
+    position: absolute;
+    bottom: 10px;
+}
+
+/***** FOOTER *****/
+
+.footer {
+    background-color: black;
+    padding: 100px;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin: 50px 0 0;
+}
+
+.footer i {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+/***** SLIDER *****/
+
+.slider {
+    position: fixed; 
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: end;
+    z-index: 1;
+}
+
+.slider-content {
+    position: relative;
+    background-color: whitesmoke;
+    width: 30%;
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.slider-content .header { border-bottom: 1px solid lightgray; }
+.slider-content .header h1 { margin-bottom: 0.5rem; }
+.slider-content footer {
+    border-top: 1px solid lightgray;
+    padding-top: 0.5rem;
+}
+
+.bi-x-square-fill:hover { color:rgb(170, 25, 25); }
+.bi-x-square-fill {
+    position: absolute;
+    top: 20;
+    right: 10;
+}
+
+.order-summary { gap: 10px; }
