@@ -5,13 +5,10 @@ html, body {
     background-color: #1F2937;
 }
 
-/* utility */
 .no-border { border: none; }
 .d1d5db { color: #D1D5DB; }
 
-/* header */
-
-#header { 
+form { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +18,6 @@ html, body {
 }
 
 input { width: 50px; height: 40px; }
-
 select {
     width: 45%;
     background-color: #1F2937;
@@ -39,9 +35,7 @@ select, button {
     border-radius: 5px;
 }
 
-/* main */
-
-.color {
+.color-container div {
     height: calc(90vh / 5); 
     display: flex;
     justify-content: center;
@@ -51,5 +45,5 @@ select, button {
 
 @media (min-width: 768px) {
     .color-container { display: flex; }
-    .color { width: 20%; height: 90vh; }
+    .color-container div { width: 20%; height: 90vh; }
 }
