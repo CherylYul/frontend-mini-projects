@@ -29,7 +29,7 @@ main {
 }
 
 .bold { font-weight: 700; }
-i { color: #0B2434; }
+i { color: #0B2434; font-size: 3rem; }
 p { margin: 0.5rem; }
 
 /* DICE */

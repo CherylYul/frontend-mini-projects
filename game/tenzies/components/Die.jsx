@@ -6,12 +6,12 @@ export default function Die(props) {
     }
     
     const diceFace = [
-        <i className="fa-solid fa-dice-one fa-2xl"></i>,
-        <i className="fa-solid fa-dice-two fa-2xl"></i>,
-        <i className="fa-solid fa-dice-three fa-2xl"></i>,
-        <i className="fa-solid fa-dice-four fa-2xl"></i>,
-        <i className="fa-solid fa-dice-five fa-2xl"></i>,
-        <i className="fa-solid fa-dice-six fa-2xl"></i>
+        <i className="bi bi-dice-1"></i>,
+        <i className="bi bi-dice-2"></i>,
+        <i className="bi bi-dice-3"></i>,
+        <i className="bi bi-dice-4"></i>,
+        <i className="bi bi-dice-5"></i>,
+        <i className="bi bi-dice-6"></i>,
     ]
     
     return (

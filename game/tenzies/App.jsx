@@ -1,8 +1,8 @@
 import React from "react"
-import Die from "./Die"
-import Header from "./Header"
+import Die from "./components/Die"
+import Header from "./components/Header"
 import {nanoid} from "nanoid"
-import Confetti from "react-confetti"
+import ConfettiExplosion from 'react-confetti-explosion';
 
 export default function App() {
 
@@ -80,7 +80,7 @@ export default function App() {
     
     return (
         <main>
-            {tenzies && <Confetti 
+            {tenzies && <ConfettiExplosion 
                 width={window.visualViewport.width}
                 height={window.visualViewport.height}
             />}
