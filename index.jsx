@@ -6,7 +6,7 @@ import Badges from "./components/Badges"
 import Notification from './components/Notifications/index'
 import Card from "./components/Cards/index"
 import Avatar from "./components/Avatar"
-import Testimonial from './components/Testimonials/Testimonial'
+import Testimonial from './components/Testimonial'
 
 function App() {
   return (
