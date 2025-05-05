@@ -1,5 +1,3 @@
-In this repository, you'll discover over 20 front-end projects I've been working on, primarily using React JS library, as part of my <a href="https://scrimba.com/learn/frontend">learning journey</a> on <a href="https://github.com/scrimba">Scrimba</a>. I'll be adding updates whenever I come across new insights, whether it's about tips, features, components, or performance enhancements.
-
 ## Projects
 
 |                    | Project name       | Description                                                                                                                                                              | Topics related                                                             |
@@ -32,11 +30,3 @@ In this repository, you'll discover over 20 front-end projects I've been working
 | 21                 | NFT site           | A simple NFT site                                                                                                                                                        | Mobile first design, Responsive design                                     |
 | 22                 | Travel journal     | Assist in capturing and sharing your travel experiences, allowing you to provide detailed written descriptions of visited places                                         | Mobile first design, Responsive design, Data-driven                        |
 | 23                 | Vanlife            | A marketplace platform facilitating the hosting and offering of vanlife services for customers, and vice versa                                                           | React JS, multi-pages, authentication, fire base, data loaders             |
-
-## ReactJS
-
-…Update soon…
-
-## Tips and Tricks
-
-…Update soon…
