@@ -1,9 +1,11 @@
 import React from "react"
 
-export default function Product({ product }) {
+function Product({ product, style, chooseProduct }) {
     return (
-        <div className="product-card">
+        <div className="product-card" style={style} onClick={() => chooseProduct(product.id)}>
             <p className="truncate">{product.name}</p>
         </div>
     )
 }
+
+export default React.memo(Product)

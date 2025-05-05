@@ -12,8 +12,14 @@ export default function ProductsList(props) {
     console.log(`Took ${endTime - startTime}ms`)
 
     const visibleProducts = props.isSort ? sortProducts : productsData 
-
-    return visibleProducts.map(product => (
-        <Product key={product.id} product={product} />
-    ))
+    const [selectedProduct, setSelectedProduct] = React.useState(null)
+    const selectedStyles = { backgroundColor: "#93c47d" }
+    
+    return visibleProducts.map(product => {
+        const isSelected = product.id === selectedProduct
+        return <Product key={product.id} 
+                        product={product} 
+                        chooseProduct={setSelectedProduct}
+                        style={ isSelected ? { ...props.style, ...selectedStyles } : props.style }/>
+    })
 }
