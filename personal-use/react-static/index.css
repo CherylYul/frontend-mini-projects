@@ -1,79 +1,87 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    font-family: Inter, sans-serif;
-    height: 100vh;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  height: 100vh;
 }
 
 /* NAV */
 
 nav {
-    display: flex;
-    align-items: center;
-    height: 90px;
-    padding: 1.5rem;
-    gap: 0.75rem;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  padding: 1.5rem;
+  gap: 0.75rem;
+  font-weight: 600;
 }
 
-.nav--icon { width: 40px; }
+.nav--icon {
+  width: 40px;
+}
 .nav--logo_text {
-    margin-right: auto;
-    color: #61DAFB;
+  margin-right: auto;
+  color: #61dafb;
 }
 
 .nav--mode {
-    display: flex;
-    align-items: center;
-    font-size: 0.875rem;
-    gap: 0.4rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  gap: 0.4rem;
 }
 
 .nav--toggle {
-    position: relative;
-    width: 50px;
-    height: 25px;
-    background-color: #F5F5F5;
-    border-radius: 25px;
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #f5f5f5;
+  border-radius: 25px;
 }
 
 .nav--toggle-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-100%, -50%);
-    width: 22px;
-    height: 22px;
-    background-color: #222222;
-    border-radius: 50%;
-    transition: 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  width: 22px;
+  height: 22px;
+  background-color: #222222;
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
 .nav--toggle.active {
-    background-color: #222222;
+  background-color: #222222;
 }
 
 .nav--toggle.active .nav--toggle-btn {
-    transform: translate(0, -50%);
-    background-color: #F5F5F5;
+  transform: translate(0, -50%);
+  background-color: #f5f5f5;
 }
 
 /* MAIN */
 main {
-    width: 400px;
-    padding: 57px 27px;
-    margin: 0 auto;
-    background-image: url(./images/react-icon-large.png);
-    background-repeat: no-repeat;
-    background-position: right 75%;
+  width: 400px;
+  padding: 57px 27px;
+  margin: 0 auto;
+  background-image: url(./images/react-icon-large.png);
+  background-repeat: no-repeat;
+  background-position: right 75%;
 }
 
-.main--facts > li { line-height: 2; }
+.main--facts > li {
+  line-height: 2;
+}
 .main--facts > li::marker {
-    font-size: 1.4rem;
-    color: #61DAFB;
+  font-size: 1.4rem;
+  color: #61dafb;
 }
 
 @media (min-width: 900px) {
-    nav { padding: 0 30%; }
+  nav {
+    padding: 0 30%;
+  }
 }

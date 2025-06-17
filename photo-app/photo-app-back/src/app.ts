@@ -19,8 +19,8 @@ mongoose
       "Connected to MongoDB with host: ",
       con.connection.host,
       " and dbName: ",
-      con.connection.name
-    )
+      con.connection.name,
+    ),
   )
   .catch((err) => console.error("MongoDB connection error:", err));
 

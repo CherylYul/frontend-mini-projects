@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
-export default function CardText({children}) {
-    return <div class="card text">{children}</div>
+export default function CardText({ children }) {
+  return <div class="card text">{children}</div>;
 }

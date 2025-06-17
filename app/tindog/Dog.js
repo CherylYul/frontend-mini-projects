@@ -1,10 +1,10 @@
 export class Dog {
-    constructor(data) {
-        Object.assign(this, data)
-    }
-    
-    getHtml() {
-        return `
+  constructor(data) {
+    Object.assign(this, data);
+  }
+
+  getHtml() {
+    return `
         <div id="image-display">
             <div class="badge">
                 <img src="./images/badge-like.png" id="like-badge">
@@ -23,36 +23,41 @@ export class Dog {
                 </button>
             </div>
         </div>
-        `
-    }
+        `;
+  }
 
-    setImage() {
-        document.getElementById("image-display").style.backgroundImage = `url(${this.avatar})`
-    }
+  setImage() {
+    document.getElementById("image-display").style.backgroundImage =
+      `url(${this.avatar})`;
+  }
 
-    setLike() {
-        this.hasBeenLiked = true
-        document.getElementById("heart-btn").style.backgroundColor = "#CCF1E6"
-        document.getElementById("like-badge").style.display = "block"
-        if (this.hasBeenSwiped) { this.unCross(); }
+  setLike() {
+    this.hasBeenLiked = true;
+    document.getElementById("heart-btn").style.backgroundColor = "#CCF1E6";
+    document.getElementById("like-badge").style.display = "block";
+    if (this.hasBeenSwiped) {
+      this.unCross();
     }
-    
-    unLike() {
-        this.hasBeenLiked = false
-        document.getElementById("heart-btn").style.backgroundColor = "transparent"
-        document.getElementById("like-badge").style.display = "none"     
+  }
+
+  unLike() {
+    this.hasBeenLiked = false;
+    document.getElementById("heart-btn").style.backgroundColor = "transparent";
+    document.getElementById("like-badge").style.display = "none";
+  }
+
+  setCorss() {
+    this.hasBeenSwiped = true;
+    document.getElementById("cross-btn").style.backgroundColor = "#EDD9DF";
+    document.getElementById("nope-badge").style.display = "block";
+    if (this.hasBeenLiked) {
+      this.unLike();
     }
-    
-    setCorss() {
-        this.hasBeenSwiped = true
-        document.getElementById("cross-btn").style.backgroundColor = "#EDD9DF"
-        document.getElementById("nope-badge").style.display = "block"
-        if (this.hasBeenLiked) { this.unLike(); }
-    }
-    
-    unCross() {
-        this.hasBeenSwiped = false
-        document.getElementById("cross-btn").style.backgroundColor = "transparent"
-        document.getElementById("nope-badge").style.display = "none"     
-    }
+  }
+
+  unCross() {
+    this.hasBeenSwiped = false;
+    document.getElementById("cross-btn").style.backgroundColor = "transparent";
+    document.getElementById("nope-badge").style.display = "none";
+  }
 }
