@@ -15,3 +15,8 @@ export default function Testimonial({children, color, name, pos, ...rest}) {
         </div>
     )
 }
+
+//   <Testimonial color="simple" name="Bob Ziroll" pos="Frontend Developer">
+//     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. 
+//     Amet feugiat est integer dolor auctor adipiscing nunc urna, sit. 
+//   </Testimonial>

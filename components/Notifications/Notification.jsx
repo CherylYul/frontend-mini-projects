@@ -16,3 +16,8 @@ export default function Notification({ children, status, className, ...rest }) {
         </div>
     )
 }
+
+        //   <Notification className="noti" status="success">
+        //     <Notification.Title>Congratulations!</Notification.Title>
+        //     <Notification.Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam.</Notification.Text>
+        //   </Notification>
