@@ -18,11 +18,6 @@ export default function SessionTwo() {
             </p>
           </div>
           <div class="feature-item">
-            <img
-              src="images/bag.svg"
-              alt="Seven items from a game listed in white on a black background"
-              class="feature-image"
-            />
             <p>
               That's not a screenshot. Those eight lines of white text on a
               black background is the actual NFT we're selling for $1.4 million.
