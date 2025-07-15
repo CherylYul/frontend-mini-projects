@@ -1,4 +1,4 @@
-import ImageCarousel from "../components/ImageCarousel";
+import ImageCarouselOptimize from "../components/ImageCarousel/ImageCarouselOptimize";
 
 const images = [
   {
@@ -30,7 +30,7 @@ const images = [
 function App() {
   return (
     <div className="mx-auto max-w-2xl px-4 pt-16">
-      <ImageCarousel images={images} />
+      <ImageCarouselOptimize images={images} />
     </div>
   );
 }
